@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Signup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card shadow-sm">
+        <div class="row">
+            <div class="col-md-6">
+              <a href="index.html"><img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo"> </a>
+                <h2 class="mt-3">Join PayPal today for free.</h2>
+                <p>Get started by choosing your account type below</p>
+            </div>
+            <div class="col-md-6">
+                <form id="signupForm">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="accountType" id="individualAccount" value="individual">
+                        <label class="form-check-label" for="individualAccount">
+                            <strong>Individual Account</strong><br>
+                            Send payments only
+                            <ul>
+                                <li>Pay for your shopping worldwide</li>
+                                <li>Get covered 24/7 from online and card fraud</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="radio" name="accountType" id="businessAccount" value="business">
+                        <label class="form-check-label" for="businessAccount">
+                            <strong>Business Account</strong><br>
+                            Receive and send payments
+                            <ul>
+                                <li>Suitable for individuals who want to receive payments, sellers, freelancers, and businesses</li>
+                                <li>Receive and send payments overseas</li>
+                                <li>No set-up/maintenance fees</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#userDetailsModal">Next</button>
+                    <div class="mt-3">
+                        <p>Already have an account? <a href="#" class="btn btn-link" id="loginButton">Login here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for User Details -->
+<div class="modal fade" id="userDetailsModal" tabindex="-1" aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userDetailsModalLabel">Enter Your Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="userDetailsForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password (8-16 characters)</label>
+                        <input type="password" class="form-control" id="password" minlength="8" maxlength="16" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Message Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h5>Sign up successfully!</h5>
+                <p>Now that you're a member, <a href="#" class="btn btn-link" id="loginButtonSuccess">Login here</a></p>
+                <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- External JavaScript -->
+<script src="signup.js"></script>
+
+</body>
+</html>

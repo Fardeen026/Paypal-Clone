@@ -1,0 +1,35 @@
+/* Ensure the body takes the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/india/India-AcctSel.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    width: 100%; /* Use full width */
+    max-width: 600px; /* Set a maximum width for better layout */
+}
+
+.card {
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+}
+
+.card img {
+    max-width: 100px;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
